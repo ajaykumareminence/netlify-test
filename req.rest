@@ -1,0 +1,52 @@
+@host=http://192.168.29.235:7000
+
+@contentType=application/json
+
+@token=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ1dWlkIjoiYmM2Y2RmNmYtNGNlNS00YTE3LWI5MjYtMDQzMzRlNTk0Njc4IiwiaWF0IjoxNjkzNDc4MjE0LCJleHAiOjE2OTM1NjQ2MTR9.Ju_-VtLWCI2YlW2UBNYUh1iGWoe8jcjiCUsLrpebsMg
+
+GET {{host}}
+
+#####
+GET {{host}}/v1/get/region
+
+#####
+POST {{host}}/v1/user/register
+Content-Type: {{contentType}}
+
+{
+    "name":"Ajay",
+    "country_id":"d",
+    "state_id":"d",
+    "email":"s@mail.com",
+    "password":"Ajay@123",
+    "confirm_password":"dd"
+}
+
+#####
+POST {{host}}/v1/user/login
+Content-Type: {{contentType}}
+
+{
+    "email":"admin@mail.com",
+    "password":"Test@123"
+}
+
+#####
+DELETE {{host}}/v1/user/logout
+Authorization: {{token}}
+
+#####
+DELETE {{host}}/v1/user/hardlogout
+Authorization: {{token}}
+
+#####
+GET {{host}}/v1/friends/find?name=ft
+Authorization: {{token}}
+
+#####
+GET {{host}}/v1/friends/sent_requests
+Authorization: {{token}}
+
+#####
+GET {{host}}/v1/friends/received_requests
+Authorization: {{token}}
