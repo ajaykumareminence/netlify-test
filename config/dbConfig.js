@@ -15,8 +15,7 @@ if(environment == 'production'){
         database: 'if0_34936754_fb_clone',
         username: 'if0_34936754',
         password: 'Ajay@1234',
-        host:'http://185.27.134.10/index.php',
-        // host: 'https://sql307.infinityfree.com',
+        host: 'https://sql307.infinityfree.com',
         dialect: 'mysql',
     })
 }
