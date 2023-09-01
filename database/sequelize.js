@@ -1,9 +1,9 @@
-import { config } from "../config/dbConfig.js";
+// import { config } from "../config/dbConfig.js";
 import Sequelize from "sequelize";
-
-export const sequelize = new Sequelize(config.database, config.username, config.password, {
-    host: config.host,
-    dialect: config.dialect,
+const { DATABASE, DB_USER, PASSWORD, HOST, DIALECT } = process.env;
+export const sequelize = new Sequelize(DATABASE, DB_USER, PASSWORD, {
+    host: HOST,
+    dialect: DIALECT,
     logging: false,
 });
 

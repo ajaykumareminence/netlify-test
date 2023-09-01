@@ -38,3 +38,11 @@ export function handleUpload(req, res, next) {
         next(); // Continue to the next middleware or route handler
     });
 }
+export function handleMultiUpload(req, res, next) {
+    upload.array('file', 5)(req, res, async (err) => {
+        if(err){
+            return res.send(reply.failed(`Err: ${err.message}`))
+        }
+        next(); // Continue to the next middleware or route handler
+    });
+}

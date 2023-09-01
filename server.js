@@ -30,7 +30,7 @@ app.use('*', async(req,res)=>{
 })
 
 //its prune time
-import "./cron/prune.js";
+// import "./cron/prune.js"; //stop until find fix
 
 const server = http.createServer(app);
 const PORT = process.env.PORT || 6000;
