@@ -14,9 +14,9 @@ if(environment == 'production'){
     Object.assign(config, {
         database: 'if0_34936754_fb_clone',
         username: 'if0_34936754',
-        password: 'Ajay@1234',
-        host: 'https://sql307.infinityfree.com',
-        dialect: 'mysql',
+        password: 'KZe5o6ZHQ4N0T6',
+        host: 'sql307.infinityfree.com',
+        dialect: 'mysql'
     })
 }
 export { config };
