@@ -3,6 +3,7 @@ import { DataTypes } from "sequelize";
 const NODE_URL = process.env.NODE_URL.toString();
 import { Like } from "./Like.js";
 import { User } from "./User.js";
+import { Comment } from "./Comment.js";
 export const Post = sequelize.define('posts', {
     id: {
         type: DataTypes.BIGINT(20),
@@ -42,3 +43,4 @@ export const Post = sequelize.define('posts', {
 await Post.sync();
 Post.belongsTo(User, { foreignKey: 'user_id' })
 Post.hasMany(Like, { foreignKey: 'post_id' })
+Post.hasMany(Comment, { foreignKey: 'post_id' })

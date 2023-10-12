@@ -11,6 +11,7 @@ import jwt from "jsonwebtoken";
 import { event } from "../events/Emitter.js";
 import "../events/ActivityEvents.js";
 import { ActivityLog } from "../models/ActivityLog.js";
+import { Op } from "sequelize";
 
 
 async function toBeFixed(request) {
@@ -22,13 +23,29 @@ async function toBeFixed(request) {
     if (!state_check) {
         return { status: 0, message: 'The state id is invalid' }
     }
-    let email_exists = await User.findOne({
+    const email_exists = await User.findOne({
         where: {
             email: request.email
         }
-    });
+    })
     if (email_exists) {
         return { status: 0, message: "Email already exists" }
+    }
+    const phone_exists = await User.findOne({
+        where: {
+            phone_number: request.phone_number
+        }
+    })
+    if (phone_exists) {
+        return { status: 0, message: "Phone number already exists" }
+    }
+    const name_exists = await User.findOne({
+        where: {
+            name: request.name
+        }
+    })
+    if (name_exists) {
+        return { status: 0, message: "This name has already exists been taken" }
     }
     return { status: 1, message: "Passed" }
 }
@@ -40,6 +57,7 @@ const register = async (req, res) => {
             country_id: 'required|numeric',
             state_id: 'required|numeric',
             email: 'required|email',
+            phone_number: 'required|numeric',
             password: 'required|password_regex',
             confirm_password: 'required|same:password'
         })
@@ -52,10 +70,11 @@ const register = async (req, res) => {
         }
         const salt = await bcryptjs.genSalt(10);
         request.password = await bcryptjs.hash(request.password, salt);
-        request = _.pick(request, ['name', 'country_id', 'state_id', 'email', 'password']);
+        request = _.pick(request, ['name', 'country_id', 'state_id', 'email', 'password', 'phone_number']);
         await User.create(request);
         return res.send(reply.success('Account created successfully'))
     } catch (err) {
+        console.log(err)
         return res.send(reply.failed("Err:" + err.message))
     }
 }
@@ -90,6 +109,7 @@ const login = async (req, res) => {
         const token = await jwt.sign(auth_data, process.env.TOKEN_SECRET, { expiresIn: '1d' });
         await AuthLog.create(auth_data);
         const user = {
+            id: exists.id,
             name: exists.name,
             email: exists.email
         }
@@ -195,7 +215,7 @@ const imageUpload = async (req, res) => {
         if (!req.file) {
             return res.send(reply.failed('Image is required'));
         }
-        await User.update({image: req?.file?.filename}, {
+        await User.update({ image: req?.file?.filename }, {
             where: {
                 id: req.user.id
             }

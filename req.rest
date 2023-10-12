@@ -14,12 +14,13 @@ POST {{host}}/v1/user/register
 Content-Type: {{contentType}}
 
 {
-    "name":"Ajay",
-    "country_id":"d",
-    "state_id":"d",
-    "email":"s@mail.com",
-    "password":"Ajay@123",
-    "confirm_password":"dd"
+    "name":"Ajey",
+    "country_id":"1",
+    "state_id":"2",
+    "phone_number":"987654321",
+    "email":"ajey@mail.com",
+    "password":"Test@123",
+    "confirm_password":"Test@123"
 }
 
 #####

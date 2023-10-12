@@ -21,10 +21,16 @@ export const User = sequelize.define('users', {
     },
     name: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
+        unique: true
     },
     email: {
         type: DataTypes.STRING,
+        allowNull: false,
+        unique: true
+    },
+    phone_number:{
+        type: DataTypes.INTEGER,
         allowNull: false,
         unique: true
     },
@@ -44,8 +50,15 @@ export const User = sequelize.define('users', {
             return rawValue ? NODE_URL+`uploads/`+rawValue : null;
         },
         allowNull: true
+    },
+    is_email_verified:{
+        type: DataTypes.TINYINT(2),
+        defaultValue:0
+    },
+    is_phone_verified:{
+        type: DataTypes.TINYINT(2),
+        defaultValue:0
     }
-
 }, {
     underscored: true,
     createdAt: 'created_at',

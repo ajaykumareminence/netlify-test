@@ -1,7 +1,7 @@
 import { sequelize } from "../database/sequelize.js";
 import { DataTypes } from "sequelize";
 import { User } from "./User.js";
-export const Like = sequelize.define('likes', {
+export const Comment = sequelize.define('comments', {
     id: {
         type: DataTypes.BIGINT(20),
         autoIncrement: true,
@@ -14,6 +14,10 @@ export const Like = sequelize.define('likes', {
     user_id: {
         type: DataTypes.BIGINT(20),
         allowNull: false
+    },
+    comment: {
+        type: DataTypes.STRING,
+        allowNull: false
     }
 }, {
     underscored: true,
@@ -21,5 +25,5 @@ export const Like = sequelize.define('likes', {
     updatedAt: 'updated_at'
 })
 
-await Like.sync({alter:true});
-Like.belongsTo(User, { foreignKey: 'user_id' });
+await Comment.sync({alter:true});
+Comment.belongsTo(User, { foreignKey: 'user_id' });

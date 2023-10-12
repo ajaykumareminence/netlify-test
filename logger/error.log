@@ -1,0 +1,147 @@
+{
+  error: ReferenceError: hell is not defined
+      at file:///home/webexpert/Desktop/Ajay/nextjs/power-vacation/nodejs/server.js:32:1
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5),
+  message: 'ReferenceError: hell is not defined\n' +
+    '    at file:///home/webexpert/Desktop/Ajay/nextjs/power-vacation/nodejs/server.js:32:1\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  level: 'error'
+}
+{
+  error: ReferenceError: hell is not defined
+      at file:///home/webexpert/Desktop/Ajay/nextjs/power-vacation/nodejs/server.js:32:1
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5),
+  message: 'ReferenceError: hell is not defined\n' +
+    '    at file:///home/webexpert/Desktop/Ajay/nextjs/power-vacation/nodejs/server.js:32:1\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  level: 'error'
+}
+{
+  error: ReferenceError: hell is not defined
+      at file:///home/webexpert/Desktop/Ajay/nextjs/power-vacation/nodejs/server.js:32:1
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5),
+  message: 'ReferenceError: hell is not defined\n' +
+    '    at file:///home/webexpert/Desktop/Ajay/nextjs/power-vacation/nodejs/server.js:32:1\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  level: 'error'
+}
+{
+  message: {
+    error: ReferenceError: hell is not defined
+        at file:///home/webexpert/Desktop/Ajay/nextjs/power-vacation/nodejs/server.js:32:1
+        at process.processTicksAndRejections (node:internal/process/task_queues:95:5),
+    timestamp: 1695640684148
+  },
+  level: 'error'
+}
+{
+  message: {
+    error: ReferenceError: hell is not defined
+        at file:///home/webexpert/Desktop/Ajay/nextjs/power-vacation/nodejs/server.js:32:1
+        at process.processTicksAndRejections (node:internal/process/task_queues:95:5),
+    timestamp: 2023-09-25T11:18:33.761Z
+  },
+  level: 'error'
+}
+{
+  message: {
+    error: ReferenceError: hell is not defined
+        at file:///home/webexpert/Desktop/Ajay/nextjs/power-vacation/nodejs/server.js:29:1
+        at process.processTicksAndRejections (node:internal/process/task_queues:95:5),
+    timestamp: 2023-09-25T11:19:09.556Z
+  },
+  level: 'error'
+}
+{
+  message: {
+    name: 'uncaughtException',
+    error: ReferenceError: hell is not defined
+        at file:///home/webexpert/Desktop/Ajay/nextjs/power-vacation/nodejs/server.js:29:1
+        at process.processTicksAndRejections (node:internal/process/task_queues:95:5),
+    timestamp: 2023-09-25T11:19:52.403Z
+  },
+  level: 'error'
+}
+{
+  message: {
+    name: 'uncaughtException',
+    error: ReferenceError: hell is not defined
+        at file:///home/webexpert/Desktop/Ajay/nextjs/power-vacation/nodejs/server.js:29:1
+        at process.processTicksAndRejections (node:internal/process/task_queues:95:5),
+    timestamp: 2023-09-25T11:19:53.521Z
+  },
+  level: 'error'
+}
+{
+  message: {
+    name: 'uncaughtException',
+    error: ReferenceError: hell is not defined
+        at file:///home/webexpert/Desktop/Ajay/nextjs/power-vacation/nodejs/server.js:29:1
+        at process.processTicksAndRejections (node:internal/process/task_queues:95:5),
+    timestamp: 2023-09-25T11:20:32.397Z
+  },
+  level: 'error'
+}
+{
+  message: {
+    name: 'uncaughtException',
+    error: ReferenceError: hell is not defined
+        at file:///home/webexpert/Desktop/Ajay/nextjs/power-vacation/nodejs/server.js:29:1
+        at process.processTicksAndRejections (node:internal/process/task_queues:95:5),
+    timestamp: '25/9/2023, 4:50:47 pm'
+  },
+  level: 'error'
+}
+{
+  message: {
+    name: 'uncaughtException',
+    error: 'ReferenceError: hell is not defined\n' +
+      '    at file:///home/webexpert/Desktop/Ajay/nextjs/power-vacation/nodejs/server.js:29:1\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '25/9/2023, 4:51:18 pm'
+  },
+  level: 'error'
+}
+{
+  message: {
+    name: 'uncaughtException',
+    error: 'ReferenceError: hell is not defined\n' +
+      '    at file:///home/webexpert/Desktop/Ajay/nextjs/power-vacation/nodejs/server.js:29:1\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '25/9/2023, 4:51:23 pm'
+  },
+  level: 'error'
+}
+{
+  message: {
+    name: 'uncaughtException',
+    error: 'ReferenceError: hell is not defined\n' +
+      '    at file:///home/webexpert/Desktop/Ajay/nextjs/power-vacation/nodejs/server.js:29:1\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    error2: 'hell is not defined',
+    timestamp: '25/9/2023, 4:51:47 pm'
+  },
+  level: 'error'
+}
+{
+  message: {
+    name: 'uncaughtException',
+    error: 'ReferenceError: hell is not defined\n' +
+      '    at file:///home/webexpert/Desktop/Ajay/nextjs/power-vacation/nodejs/server.js:29:1\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    error2: 'hell is not defined',
+    error3: 'ReferenceError',
+    timestamp: '25/9/2023, 4:52:09 pm'
+  },
+  level: 'error'
+}
+{
+  message: {
+    name: 'ReferenceError',
+    error: 'ReferenceError: hell is not defined\n' +
+      '    at file:///home/webexpert/Desktop/Ajay/nextjs/power-vacation/nodejs/server.js:29:1\n' +
+      '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    timestamp: '25/9/2023, 4:52:33 pm'
+  },
+  level: 'error'
+}
